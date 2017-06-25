@@ -1,0 +1,17 @@
+{
+  "name": "hookcord",
+  "version": "0.0.5",
+  "description": "ggg",
+  "main": "discordgod.js",
+  "scripts": {
+    "test": "nodemon discordgod.js"
+  },
+  "author": "IceHax",
+  "license": "GPL-3.0",
+  "keywords": [
+    "webhook",
+    "hooks",
+    "discord",
+    "message"
+  ]
+}
