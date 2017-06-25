@@ -1,9 +1,9 @@
 # HookCord
 webclient to send messages on discord trough a webhook
 
-##General Description
+## General Description
 Hookcord is a node js written client to send messages on any discord server you want using webhooks.
-###what will you need:
+### What will you need:
 
 **you have to install these npm packages in order to make hookcord work.**
 
