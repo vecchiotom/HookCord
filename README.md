@@ -10,8 +10,10 @@ Hookcord is a node js written client to send messages on any discord server you 
 1- express
 2- request
 3-body-parser
-4- discord.js
+
 
 > npm install express request body-parser
+
+**and also discord.js is required**
 >npm install discord.js
 
