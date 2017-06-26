@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Hookcord</title>
+        <meta name="author" content="DJMAN">
+        <meta name="description" content="Hookcord is a utility that is web based where you can send messages to Discord via a webhook.">
+		<script>function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+</script>
+        
+        <style>
+        	@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700');
+
+			body {
+				font-family: 'Ubuntu Mono', monospace;
+				background-color: black;
+				color: white;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+				font-size: 100%;
+			}
+
+			#title {
+				font-size: 500%;
+				font-weight: 700;
+			}
+
+			.credits {
+				opacity: 50%;
+				font-size: 75%;
+			}
+        </style>
+    </head>
+    <body>
+	<script>
+document.getElementById('user').value = getCookie('user')
+var a = 0
+function cookieuser() {
+document.cookie = "user = " + document.getElementById('user').value
+document.cookie = "id = " + document.getElementById('id').value
+document.cookie = "token = " + document.getElementById('token').value
+document.cookie = "avatar = " + document.getElementById('avatar').value
+document.cookie = "msg = " + document.getElementById('msg').value
+}
+
+</script>
+    	<p id="title">HOOKCORD</p>
+		<p>Fill out all the required fields, and click Submit.</p>
+    	<form method="post" action="/webhook">
+    		<input type="text" id="id" name="id" placeholder="Webhook ID" onkeypress="cookieuser()" onkeyup="cookieuser()">
+		    <input type="text" id="token" name ="token" placeholder="Webhook Token" onkeypress="cookieuser()" onkeyup="cookieuser()">
+		    <input type="text" id="user" name="user" placeholder="Username" onkeypress="cookieuser()" onkeyup="cookieuser()">
+		    <input type="text" id="msg" name ="msg" placeholder="Message" onkeypress="cookieuser()" onkeyup="cookieuser()">
+		    <input type="text" id="avatar" name="avatar" placeholder="Avatar URL" onkeypress="cookieuser()" onkeyup="cookieuser()" >
+
+		    <br><br>
+		    <input type="submit" name="submit" value="Submit Message">
+  		</form>
+		<script>
+   var usercookie = getCookie('user')
+   var idcookie = getCookie('id')
+   var tokencookie = getCookie('token')
+   var avatarcookie = getCookie('avatar')
+   var msgcookie = getCookie('msg')
+   document.getElementById('user').value = usercookie
+   document.getElementById('id').value = idcookie
+   document.getElementById('token').value = tokencookie
+   document.getElementById('avatar').value = avatarcookie
+   document.getElementById('msg').value = msgcookie
+  </script>
+  		<br>
+  		<p>Join Nerd Place!</p>
+  		<iframe src="https://discordapp.com/widget?id=327155086532935710&theme=dark" width="350" height="350" allowtransparency="true" frameborder="0"></iframe>
+  		<br>
+		<p class="credits">Hookcord was created by IceHax and <a href="http://djman.tk">DJMAN</a>.<br>
+		DiscordApp is a trademark of Hammer & Chisel, Inc.<br>
+		We are not affiliated with Discord nor Hammer & Chisel, Inc.<br>
+		This product was made in 2017. All rights reserved.<br>
+		Check out Discord <a href="http://discordapp.com">here</a>.</p>
+    </body>
+</html>
